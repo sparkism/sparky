@@ -7,8 +7,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Mono:wght@400;700&display=swap');
 
-  /* Local display font — used for every book title.
-     Lives at fonts/MODERN_TYPEWRITER.ttf. */
+  /* Local display fontfor every book title.*/
   @font-face{
     font-family:'MODERN_TYPEWRITER';
     src:url('MODERN_TYPEWRITER.ttf') format('truetype');
@@ -79,9 +78,7 @@
     padding:8px;
   }
 
-  /* Fixed-size cover, so mismatched source image sizes are still
-     cropped to a uniform shape. Change these two values to resize
-     ALL covers at once. */
+  /* Image sizes are cropped to a uniform shape. Change these two values to resize ALL covers at once.*/
   .cover-wrap{
     position:relative;
     flex:0 0 76px;
@@ -145,9 +142,8 @@
     overflow:hidden;
   }
 
-  /* OPTIONAL — not used by default, kept for reference. Add class
-     "eyebrow" above a title, or a .meta block below the description,
-     if a particular book needs a category label or pages/format/year. */
+  /* OPTIONAL — Add class "eyebrow" above a title, or a .meta block below the description,
+     if a particular book needs a category label or pages/format/year.*/
   .eyebrow{
     font-size:9px;
     letter-spacing:0.14em;
@@ -165,10 +161,6 @@
   }
 
   /* ---------- quote ---------- */
-  /* Styled identically to .desc above (same font, size, weight,
-     color) so it reads as part of the same system as the card
-     text — it will shrink/grow in step with the cards if you ever
-     change .desc's font-size, since both share these values. */
 
   .quote{
     max-width:620px;
@@ -218,6 +210,7 @@
 </div>
 
 <main class="board">
+
   <!-- =====================================================================
        EACH .card BELOW IS ONE BOOK OR ZINE. All cards show at once, two
        per row (a plain 2-column grid), stacking downward as pairs.
