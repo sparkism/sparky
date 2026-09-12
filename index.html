@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>bookcase</title>
+<title>BOOKCASE</title>
+  
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Space+Mono:wght@400;700&display=swap');
 
-  /* Local display fontfor every book title.*/
   @font-face{
     font-family:'MODERN_TYPEWRITER';
     src:url('MODERN_TYPEWRITER.ttf') format('truetype');
@@ -39,8 +41,6 @@
 
   a{ color:inherit; }
 
-  /* ---------- page header ---------- */
-
   .page-header{
     display:flex;
     justify-content:space-between;
@@ -54,9 +54,6 @@
     color:var(--paper-dim);
   }
 
-  /* ---------- board (all books at once) ---------- */
-
-  /* 2-column grid: books stack in pairs. */
   .board{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
@@ -66,11 +63,6 @@
     padding:36px 20px;
   }
 
-  /* ---------- card ---------- */
-  /* Minimal, fixed-size, side-by-side: small cover + title/author/
-     description. Kept deliberately compact so all 5 fit on screen
-     together on desktop. */
-
   .card{
     display:flex;
     gap:10px;
@@ -78,7 +70,6 @@
     padding:8px;
   }
 
-  /* Image sizes are cropped to a uniform shape. Change these two values to resize ALL covers at once.*/
   .cover-wrap{
     position:relative;
     flex:0 0 76px;
@@ -159,9 +150,7 @@
     color:var(--paper-dim);
     margin-top:2px;
   }
-
-  /* ---------- quote ---------- */
-
+  
   .quote{
     max-width:620px;
     margin:0 auto;
@@ -189,8 +178,6 @@
     color:var(--paper-dim);
   }
 
-  /* ---------- responsive ---------- */
-
   @media (max-width: 620px){
     .page-header{ padding:18px 14px 0; }
     .board{
@@ -210,26 +197,6 @@
 </div>
 
 <main class="board">
-
-  <!-- =====================================================================
-       ADDING MORE: duplicate a whole <article class="card">...</article>
-       block and add it anywhere in the list — the grid re-flows into
-       pairs automatically, no CSS changes needed.
-
-       COVERS: drop your image file into the covers/ folder next to this
-       index.html, then point src at it, e.g. src="covers/my-zine.jpg"
-       Any image size/shape works — it's auto-cropped to a uniform box
-       (resize the box itself via .cover-wrap in the CSS above).
-
-       PDF LINK: change the title's href="#" to your file, e.g.
-       href="pdfs/my-zine.pdf" and add the download attribute:
-       <a class="title-link" href="pdfs/my-zine.pdf" download>
-
-     	 Two optional pieces exist in the CSS but
-       aren't used below: .eyebrow (a small label above the title,
-       e.g. "Zine") and .meta (a row of facts like pages/format/year).
-       Add either back to a card only if you want it there.
-       ===================================================================== -->
 
   <article class="card">
     <div class="cover-wrap">
